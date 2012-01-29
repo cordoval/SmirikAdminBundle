@@ -8,12 +8,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class DefaultController extends Controller
 {
-    /**
-     * @Route("/hello/{name}")
-     * @Template()
-     */
-    public function indexAction($name)
-    {
-        return array('name' => $name);
-    }
+  /**
+   * @Route("/admin", name="admin_main")
+   * @Template("SmirikAdminBundle::index.html.twig", vars={"get"})
+   */
+  public function indexAction()
+  {
+    return array();
+  }
 }

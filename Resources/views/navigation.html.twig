@@ -1,0 +1,10 @@
+<ul class="tabs">
+  {% set menuItem = knp_menu_get('SmirikAdminBundle:Builder:mainMenu') %}
+  {% for item in menuItem %}
+      {% if item.isCurrent %}
+        <li class="active"><a href="{{ item.uri }}">{{ item.label|trans }}</a></li>
+      {% else %}
+        <li><a href="{{ item.uri }}">{{ item.label|trans }}</a></li>
+      {% endif %}
+  {% endfor %}
+</ul>
