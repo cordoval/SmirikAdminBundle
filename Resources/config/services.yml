@@ -1,0 +1,8 @@
+services:
+  smirik_admin.menu_renderer:
+    # The class implements Knp\Menu\Renderer\RendererInterface
+    class: Smirik\AdminBundle\Menu\MainRenderer
+    arguments: [] # set your own dependencies here
+    tags:
+      # The alias is what is used to retrieve the menu
+      - { name: knp_menu.renderer, alias: main }

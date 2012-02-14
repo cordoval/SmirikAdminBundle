@@ -13,10 +13,13 @@ class Builder extends ContainerAware
         $menu = $factory->createItem('root');
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
 
-        $menu->addChild('admin.home', array('route' => 'admin_main'));
+        $menu->addChild('admin.home', array('route' => 'admin_main', 'trans' => true, 'transdomain' => 'SmirikAdminBundle'));
 
         $this->container->get('event_dispatcher')->dispatch(ConfigureMenuEvent::CONFIGURE, new ConfigureMenuEvent($factory, $menu));
-
+        
+        $menu->setAttribute('class', 'tabs');
+        $menu->setLabelAttribute('currentClass', 'active');
+        
         return $menu;
     }
 }

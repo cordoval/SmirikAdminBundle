@@ -1,14 +1,5 @@
 {% extends '::base.html.twig' %}
 
-{% block javascripts %}
-{% javascripts  '@SmirikAdminBundle/Resources/public/js/jquery-1.7.1.js'
-								'@SmirikAdminBundle/Resources/public/js/bootstrap-modal.js'
-								'@SmirikAdminBundle/Resources/public/js/bootstrap-tabs.js'
- 							  %}
-  <script type="text/javascript" src="{{ asset_url }}"></script>
-{% endjavascripts %}
-{% endblock %}
-
 {% block content_navigation %}
 {% include 'SmirikAdminBundle::navigation.html.twig' %}
 {% endblock %}
