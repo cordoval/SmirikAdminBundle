@@ -1,4 +1,5 @@
-<ul class="nav nav-pills">
+<div class="content" style="padding: 3px 0px 5px 10px ;">
+<ul class="nav nav-pills" style="margin-bottom: 0px;">
   {% set menuItem = knp_menu_get('SmirikAdminBundle:Builder:mainMenu') %}
   {% for item in menuItem %}
       {% if item.hasChildren %}
@@ -24,3 +25,4 @@
       {% endif %}
   {% endfor %}
 </ul>
+</div>
