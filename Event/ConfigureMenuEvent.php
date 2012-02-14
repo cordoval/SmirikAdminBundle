@@ -12,15 +12,17 @@ class ConfigureMenuEvent extends Event
 
     private $factory;
     private $menu;
+    public $container;
 
     /**
      * @param \Knp\Menu\FactoryInterface $factory
      * @param \Knp\Menu\ItemInterface $menu
      */
-    public function __construct(FactoryInterface $factory, ItemInterface $menu)
+    public function __construct(FactoryInterface $factory, ItemInterface $menu, $container)
     {
         $this->factory = $factory;
         $this->menu = $menu;
+        $this->container = $container;
     }
 
     /**
