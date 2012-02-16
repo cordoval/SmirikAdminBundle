@@ -2,3 +2,13 @@ admin.home: Панель
 
 admin.main.title: Администрирование
 admin.main.title.comment: главная
+
+# Base translations
+
+admin.form.action.add:    Добавить
+admin.form.action.create: Создать
+admin.form.action.edit:   Изменить
+admin.form.action.delete: Удалить
+admin.form.action.save:   Сохранить
+admin.form.action.close:  Закрыть
+admin.action.back:        Назад
